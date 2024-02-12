@@ -1,0 +1,45 @@
+﻿/*Created by Chan Yat Chun, please give credits when using*/
+
+/*The replica of the good old <marquee>*/
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.large-bold-text-outline {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.large-bold-text {
+    font-size: 32px;
+    font-weight: bold;
+    display: inline;
+}
+.black-bg-green-text{
+    background-color: black;
+    color: lightgreen;
+    padding: 10px;
+}
+
+.tiny-gray-text {
+    font-size: 6px;
+    color: gray;
+}
+.underline-text {
+    font-style: italic;
+    text-decoration: underline;
+    display: inline;
+}

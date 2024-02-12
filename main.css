@@ -1,0 +1,68 @@
+﻿/*Created by Chan Yat Chun, please give credits when using*/
+
+body {
+    background-color: rgba(16,16,128, 0.5);
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu {
+    flex-grow: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    background-color: rgba(32,32, 128, 0.1);
+}
+
+    .menu button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+        text-align: left;
+        background-image: linear-gradient(to bottom right, rgba(32, 32, 200, 0.5), rgba(32, 32, 128, 0));
+    }
+
+        .menu button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .menu button:active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+.main-content {
+    flex-grow: 1;
+    position: fixed;
+    left: 21%;
+    top: 0;
+    color: white;
+    font-size: 20px;
+    overflow-y: auto;
+    overflow-x: clip;
+    height: 100%;
+    width: 78%;
+}
+
+hr {
+    color: white;
+    background-color: lightgray;
+}
+
+a {
+    color: inherit;
+    background-color: inherit;
+    text-decoration: inherit;
+}
+a:link, a:visited, a:hover {
+    color: inherit;
+    background-color: inherit;
+    text-decoration: inherit;
+}
