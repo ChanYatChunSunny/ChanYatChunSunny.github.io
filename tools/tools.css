@@ -1,0 +1,21 @@
+﻿.general-btn {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(32, 32, 200, 0.5);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(32,32,128, 0.5);
+}
+    .general-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .general-btn:active {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+input[type="file"] {
+    display: none;
+}

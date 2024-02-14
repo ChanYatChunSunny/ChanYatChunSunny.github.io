@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--Created by Chan Yat Chun, please give credits when using-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta property="og:title" content="Sunny's color picker" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="programmer, tools, online tools, tool, online tool, RGB picker, image, alpha, RGBA picker, picture">
+    <meta name="og:description" content="An ad-free RGB picker for images on your device. Also support alpha channel.">
+    <meta name="author" content="Chan Yat Chun" />
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/text.css">
+    <link rel="stylesheet" href="/tools/color_picker.css">
+    <link rel="stylesheet" href="/tools/tools.css">
+    <meta charset="utf-8" />
+    <title>Sunny's tools</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="/tools/tools.js"></script>
+    <script src="/tools/color_picker.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <button id="more-tools-btn">More tools</button>
+        </div>
+        <div class="picker-main-content" id="main-content">
+            <hr />
+            <button class="general-btn" id="change-mode-btn">Change mode</button>
+            <br />
+            <div id="curr-mode">Current mode: Move mode</div>
+            <br />
+            Move mode: Update the RGBA values whenever the cursor move on the image
+            <br />
+            Click mode: Only update the RGBA values after left click on the image
+            <hr />
+            <label class="general-btn">
+                <input type="file" class="img-sel-btn" id="img-sel-btn" accept="image/png, image/jpeg, image/bmp, image/webp, image/ico">
+                Select image from your device's storage
+            </label>
+            <br />
+            The submitted image should only be processed in your device, I will not be able to access it, feel free to check the source code at <a href="https://github.com/ChanYatChunSunny/ChanYatChunSunny.github.io">https://github.com/ChanYatChunSunny/ChanYatChunSunny.github.io</a> if you are concerned.
+            <hr />
+            <div id="rgba-display">
+                Red: 0, green: 0, blue: 0, alpha: 0
+                <br />
+                RGB: #000000
+                <br />
+                RGBA: #00000000
+            </div>
+            <hr />
+            <canvas id="picker-canvas" />
+        </div>
+    </div>
+</body>
+</html>

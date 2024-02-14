@@ -1,0 +1,26 @@
+﻿/*Created by Chan Yat Chun, please give credits when using*/
+
+.img-sel-btn {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+canvas {
+    background-color: white;
+}
+
+.picker-main-content {
+    flex-grow: 1;
+    position: fixed;
+    left: 21%;
+    top: 0;
+    color: white;
+    font-size: 20px;
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 100%;
+    width: 78%;
+}
