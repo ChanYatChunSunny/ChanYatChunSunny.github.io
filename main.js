@@ -1,24 +1,24 @@
 /*Created by Chan Yat Chun, please give credits when using*/
 
-var btnClickCount = 0;
+let btnClickCount = 0;
 
 $(document).ready(function () {
-    switch (localStorage.getItem("loc")) {
-        case "summary":
-        case "skills":
-        case "programming_languages":
-        case "experiences":
-        case "other":
-        case "this":
-        case "contacts":
-        case "tools":
-            contentTyper(localStorage.getItem("loc"));
+    //This implementation of "page switching" is NOT great for SEO, this is merely a proof of concept 
+    //Ensure the value in local storage is valid
+    const possibleLocalItems = ["summary", "skills", "programming_languages", "experiences", "other", "this", "contacts", "tools"];
+    var storedItem = localStorage.getItem("loc");
+    var isStoredItemExists = false;
+    for (let comparedItem in possibleLocalItems) {
+        if (storedItem === comparedItem) {
+            contentTyper(currItem);
+            isStoredItemExists = true;
             break;
-        default:
-            localStorage.setItem("loc", "summary");
-            contentTyper(localStorage.getItem("loc"));
-            break;
+        }
     }
+    if (!storedItem) {
+        contentTyper(storedItem);
+    }
+    //Assign functions to menu's btns
     $('#summary-btn').click(function () {
         $(document).prop("title", "Sunny's summary");
         localStorage.setItem("loc", "summary");
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 function contentTyper(contentName) {
     btnClickCount += 1;
-    var contentDisplay = $("#main-content");
+    let contentDisplay = $("#main-content");
     contentDisplay.html('');
     if (btnClickCount <= 1) {
         contentDisplay.fadeTo(0, 0);
