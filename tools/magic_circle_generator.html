@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<!--Created by Chan Yat Chun, please give credits when using-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta property="og:title" content="Sunny's color picker" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="programmer, tools, online tools, tool, online tool, fantasy, magic, magical, magic circle, summoning circle, picture" />
+    <meta name="og:description" content="An online generator that create fancy-looking fantasy magic circle." />
+    <meta property="og:image" content="/tools/magic_circle.png" />
+    <meta name="author" content="Chan Yat Chun" />
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/text.css">
+    <link rel="stylesheet" href="/tools/tools.css">
+    <meta charset="utf-8" />
+    <title>Sunny's tools</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="/tools/tools.js"></script>
+    <script src="/tools/magic_circle_generator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <button id="more-tools-btn">More tools</button>
+        </div>
+        <div class="main-content" id="main-content">
+            <h1>Magic circle generator</h1>
+            <hr />
+            <label>Outer edge radius: </label><input type="range" id="radius-slider" min="128" max="256" value="192">
+            <br />
+            <label>Distance between inner edge and outer edge: </label><input type="range" id="inner-outer-distance-slider" min="16" max="96" value="48">
+            <br />
+            <label>Complexity: </label><input type="range" id="complexity-slider" min="32" max="128" value="48">
+            <br />
+            <button class="general-btn" id="generate-btn">Generate</button>
+            <hr />
+            Feel free to use the generated image, credits to this page is highly appreciated.
+            <hr />
+            <canvas id="magic-circle-canvas" width=768 height=768></canvas>
+            <hr />
+            <button class="general-btn" id="download-btn">Download as PNG</button>
+            <hr />
+        </div>
+    </div>
+</body>
+</html>

@@ -19,3 +19,7 @@
 input[type="file"] {
     display: none;
 }
+
+canvas {
+    background-color: black;
+}
