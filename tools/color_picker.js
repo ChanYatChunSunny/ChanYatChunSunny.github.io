@@ -1,3 +1,6 @@
+/*Created by Chan Yat Chun, please give credits when using*/
+
+
 $(document).ready(function () {
     let pickerCanvas = $("#picker-canvas")[0];
     let isClickMode = false;
@@ -22,7 +25,7 @@ $(document).ready(function () {
         pickerCanvas.getContext("2d").drawImage(this, 0, 0);
     }
     function loadFailed() {
-        $("#rgba-display").text("Unable to load image");
+        $("#rgba-display").text("Unable to load the image in your device, try again.");
     }
     $(pickerCanvas).mousemove(function (e) {
         if (!isClickMode) {

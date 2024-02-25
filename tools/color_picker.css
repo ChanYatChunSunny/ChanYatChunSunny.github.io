@@ -8,10 +8,6 @@
     text-align: left;
 }
 
-canvas {
-    background-color: white;
-}
-
 .picker-main-content {
     flex-grow: 1;
     position: fixed;
