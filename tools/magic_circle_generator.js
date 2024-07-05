@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     let radius = 192;
     let distance = 32;
-    let complexity = 48;
+    let complexity = 32;
 
     radiusSlider.val(radius);
     distanceSlider.val(distance);
@@ -63,32 +63,16 @@ $(document).ready(function () {
         canvasContext.stroke();
 
         let points = [];
-        let angleCounter = 0;
 
         for (let i = 0; i < complexity; i++) {
 
             let x = originX;
             let y = originY;
+            let angle = (Math.floor(Math.random() * 36) * 10) / 360 * 2 * Math.PI;
             if (Math.random() < 0.38) {
-                //Continuous angles
-                if (Math.random() < 0.9) {
-                    angleCounter += Math.random() / (0.2 * complexity);
-                    //Non-continuous angles
-                } else {
-                    angleCounter = Math.random();
-                }
-                let angle = angleCounter * 2 * Math.PI;
                 x += radius * Math.cos(angle);
                 y += radius * Math.sin(angle);
             } else if (Math.random() < 0.96) {
-                //Continuous angles
-                if (Math.random() < 0.98) {
-                    angleCounter += Math.random() / (0.1 * complexity);
-                    //Non-continuous angles
-                } else {
-                    angleCounter = Math.random();
-                }
-                let angle = angleCounter * 2 * Math.PI;
                 x += innerRadius * Math.cos(angle);
                 y += innerRadius * Math.sin(angle);
             }
@@ -102,7 +86,7 @@ $(document).ready(function () {
         canvasContext.lineWidth = 3;
         canvasContext.strokeStyle = "purple";
         for (let i = 0; i < complexity; i++) {
-            if (Math.random() < 0.32) {
+            if (Math.random() < 0.48) {
                 canvasContext.beginPath();
                 canvasContext.arc(points[i].x, points[i].y, 8, 0, 2 * Math.PI);
                 canvasContext.stroke();
@@ -129,7 +113,7 @@ $(document).ready(function () {
 
         //Second stage connection
         let halfComplexity = Math.floor(complexity / 2);
-        let maxRandConnectCount = Math.floor(halfComplexity + Math.random() * complexity);
+        let maxRandConnectCount = Math.floor((halfComplexity / 2) + Math.random() * halfComplexity);
         for (let i = 0; i < maxRandConnectCount; i++) {
             let a = Math.floor(Math.random() * complexity);
             let b = Math.floor(Math.random() * complexity);
